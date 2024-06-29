@@ -38,7 +38,7 @@ export default function Footer() {
                   'flex items-center gap-1',
                   'text-dim min-h-10',
                   'px-4 sm:px-6 md:px-8' // Added padding here
-                )}
+                )}>
                 <div className="flex gap-x-3 xs:gap-x-4 flex-grow flex-wrap">
                   {isPathAdmin(pathname)
                     ? <>
