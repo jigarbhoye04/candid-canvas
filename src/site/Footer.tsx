@@ -24,52 +24,54 @@ export default function Footer() {
   const shouldAnimate = !isPathAdmin(pathname);
 
   return (
-    <SiteGrid
-      contentMain={
-        <AnimateItems
-          animateOnFirstLoadOnly
-          type={!shouldAnimate ? 'none' : 'bottom'}
-          distanceOffset={10}
-          items={showFooter
-            ? [<div
-              key="footer"
-              className={clsx(
-                'flex items-center gap-1',
-                'text-dim min-h-10',
-              )}>
-              <div className="flex gap-x-3 xs:gap-x-4 flex-grow flex-wrap">
-                {isPathAdmin(pathname)
-                  ? <>
-                    {userEmail === undefined &&
-                      <Spinner size={14} className="translate-y-[2px]" />}
-                    {userEmail && <>
-                      <div className={clsx(
-                        'truncate max-w-full',
-                      )}>
-                        {userEmail}
-                      </div>
-                      <form action={() => signOutAndRedirectAction()
-                        .then(() => setUserEmail?.(undefined))}>
-                        <SubmitButtonWithStatus styleAs="link">
-                          Sign out
-                        </SubmitButtonWithStatus>
-                      </form>
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-gray-800">
+      <SiteGrid
+        contentMain={
+          <AnimateItems
+            animateOnFirstLoadOnly
+            type={!shouldAnimate ? 'none' : 'bottom'}
+            distanceOffset={10}
+            items={showFooter
+              ? [<div
+                key="footer"
+                className={clsx(
+                  'flex items-center gap-1',
+                  'text-dim min-h-10',
+                )}>
+                <div className="flex gap-x-3 xs:gap-x-4 flex-grow flex-wrap">
+                  {isPathAdmin(pathname)
+                    ? <>
+                      {userEmail === undefined &&
+                        <Spinner size={14} className="translate-y-[2px]" />}
+                      {userEmail && <>
+                        <div className={clsx(
+                          'truncate max-w-full',
+                        )}>
+                          {userEmail}
+                        </div>
+                        <form action={() => signOutAndRedirectAction()
+                          .then(() => setUserEmail?.(undefined))}>
+                          <SubmitButtonWithStatus styleAs="link">
+                            Sign out
+                          </SubmitButtonWithStatus>
+                        </form>
+                      </>}
+                    </>
+                    : <>
+                      <Link href={PATH_ADMIN_PHOTOS}>
+                        Admin
+                      </Link>
+                      {SHOW_REPO_LINK &&
+                        <RepoLink />}
                     </>}
-                  </>
-                  : <>
-                    <Link href={PATH_ADMIN_PHOTOS}>
-                      Admin
-                    </Link>
-                    {SHOW_REPO_LINK &&
-                      <RepoLink />}
-                  </>}
-              </div>
-              <div className="flex items-center h-10">
-                <ThemeSwitcher />
-              </div>
-            </div>]
-            : []}
-        />}
-    />
+                </div>
+                <div className="flex items-center h-10">
+                  <ThemeSwitcher />
+                </div>
+              </div>]
+              : []}
+          />}
+      />
+    </div>
   );
 }
