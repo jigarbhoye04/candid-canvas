@@ -24,7 +24,7 @@ export default function Footer() {
   const shouldAnimate = !isPathAdmin(pathname);
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-opacity-80 backdrop-blur-sm">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-opacity-60 backdrop-blur-md">
       <SiteGrid
         contentMain={
           <AnimateItems
