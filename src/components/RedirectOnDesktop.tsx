@@ -1,33 +1,33 @@
-'use client';
+"use client";
 
-import useIsDesktop from '@/utility/useIsDesktop';
-import { usePathname, useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import useIsDesktop from "@/utility/useIsDesktop";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function RedirectOnDesktop({
-  redirectPath,
-  shouldPrefetchRedirect = true,
+   redirectPath,
+   shouldPrefetchRedirect = true,
 }: {
-  redirectPath: string
-  shouldPrefetchRedirect?: boolean
+   redirectPath: string;
+   shouldPrefetchRedirect?: boolean;
 }) {
-  const router = useRouter();
-  
-  const pathname = usePathname();
+   const router = useRouter();
 
-  const isDesktop = useIsDesktop();
+   const pathname = usePathname();
 
-  useEffect(() => {
-    if (shouldPrefetchRedirect) {
-      router.prefetch(redirectPath);
-    }
-  }, [router, shouldPrefetchRedirect, redirectPath]);
+   const isDesktop = useIsDesktop();
 
-  useEffect(() => {
-    if (isDesktop && pathname !== redirectPath) {
-      router.push(redirectPath);
-    }
-  }, [router, isDesktop, pathname, redirectPath]);
+   useEffect(() => {
+      if (shouldPrefetchRedirect) {
+         router.prefetch(redirectPath);
+      }
+   }, [router, shouldPrefetchRedirect, redirectPath]);
 
-  return null;
+   useEffect(() => {
+      if (isDesktop && pathname !== redirectPath) {
+         router.push(redirectPath);
+      }
+   }, [router, isDesktop, pathname, redirectPath]);
+
+   return null;
 }

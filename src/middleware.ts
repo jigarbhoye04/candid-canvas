@@ -10,7 +10,7 @@ import {
   PREFIX_TAG,
 } from './site/paths';
 
-export default function middleware(req: NextRequest, res:NextResponse) {
+export default function middleware(req: NextRequest, res: NextResponse) {
   const pathname = req.nextUrl.pathname;
 
   if (pathname === PATH_ADMIN) {

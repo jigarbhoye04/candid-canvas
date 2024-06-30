@@ -1,13 +1,11 @@
-'use client';
+"use client";
 
-import { SWRConfig } from 'swr';
+import { SWRConfig } from "swr";
 
 export default function SwrConfigClient({
-  children,
+   children,
 }: {
-  children: React.ReactNode
+   children: React.ReactNode;
 }) {
-  return <SWRConfig>
-    {children}
-  </SWRConfig>;
+   return <SWRConfig>{children}</SWRConfig>;
 }
