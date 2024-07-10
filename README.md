@@ -12,12 +12,11 @@ Features
 - Organize photos by tag
 - Infinite scroll
 - Light/dark mode
-- Automatic OG image generation
-- CMD-K menu with photo search
+<!-- - Automatic OG image generation -->
+<!-- - CMD-K menu with photo search -->
 <!-- - Experimental support for AI-generated descriptions -->
 <!-- - Support for Fujifilm simulations -->
 
-<img src="/readme/og-image-share.png" alt="OG Image Preview" width=600 />
 
 Installation
 -
@@ -40,12 +39,6 @@ Installation
 3. Trigger redeploy
    - Visit project on Vercel, navigate to "Deployments" tab, click ••• button next to most recent deployment, and select "Redeploy"
 
-### 3. Upload your first photo 🎉
-1. Visit `/admin`
-2. Sign in with credentials supplied in Step 2
-2. Click "Upload Photos"
-3. Add optional title
-4. Click "Create"
 
 Develop locally
 -
