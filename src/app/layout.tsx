@@ -89,6 +89,7 @@ export default function RootLayout({
                   'mb-12',
                 )}>
                   {children}
+                  <SpeedInsights debug={false}  />
                 </div>
                 <Footer />
               </main>
@@ -96,7 +97,7 @@ export default function RootLayout({
             </ThemeProvider>
           </SwrConfigClient>
           <Analytics debug={false} />
-          <SpeedInsights debug={false}  />
+          {/* <SpeedInsights debug={false}  /> */}
           <PhotoEscapeHandler />
           <ToasterWithThemes />
         </AppStateProvider>
