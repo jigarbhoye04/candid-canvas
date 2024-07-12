@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Aspect Range';
+  src: url('/fonts/ASPECT-RANGE.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-aspect-range {
+  font-family: 'Aspect Range', sans-serif;
+}

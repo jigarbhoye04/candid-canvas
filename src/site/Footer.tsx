@@ -87,16 +87,15 @@ export default function Footer() {
                                          </>
                                       ) : (
                                          <>
-                                            <Link href={PATH_ADMIN_PHOTOS}>
+                                            {/* <Link href={PATH_ADMIN_PHOTOS}>
                                                Admin
-                                            </Link>
+                                            </Link> */}
                                             {SHOW_REPO_LINK && <RepoLink />}
                                          </>
                                       )}
                                    </div>
-                                   <div className="flex items-center h-10">
-                                      {/* <ThemeSwitcher /> */}
-                                      {/* Footer */}
+                                   <div className="flex items-center h-10 justify-between">
+                                      <SocialLinks />
                                    </div>
                                 </div>,
                              ]
@@ -105,19 +104,6 @@ export default function Footer() {
                   />
                }
             />
-         </div>
-         <div className="fixed top-0 right-0 z-60 p-5 flex justify-between items-center">
-            {/* <Switcher type="borderless">
-               <SwitcherItem
-                  icon={<IconSearch />}
-                  onClick={() => setIsCommandKOpen?.(true)}
-               />
-            </Switcher> */}
-            {/* Search */}
-            <ThemeSwitcher />
-         </div>
-         <div className="fixed bottom-0 right-0 z-60 p-5 flex justify-between items-center">
-            <SocialLinks />
          </div>
       </>
    );

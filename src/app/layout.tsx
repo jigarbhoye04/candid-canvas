@@ -20,6 +20,7 @@ import SwrConfigClient from '../state/SwrConfigClient';
 
 import '../site/globals.css';
 import '../site/sonner.css';
+import ThemeSwitcher from '@/site/ThemeSwitcher';
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ['latin'],
