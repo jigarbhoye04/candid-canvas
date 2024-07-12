@@ -3,8 +3,7 @@
 import { useState,useEffect } from "react";
 import { useTheme } from "next-themes";
 
-import { FaInstagram,FaTwitter } from "react-icons/fa";
-
+import { FaBook, FaInstagram,FaTwitter } from "react-icons/fa";
 
 export default function SocialLinks() {
     const { theme } = useTheme();
@@ -26,7 +25,7 @@ export default function SocialLinks() {
                 rel="noopener noreferrer"
                 className="text-xl text-gray-400 hover:text-gray-500"
             >
-                <FaInstagram className="w-6"/>
+                <FaInstagram className="w-5 h-8"/>
             </a>
             <a
                 href="https://www.x.com/jigarbhoye04"
@@ -34,7 +33,15 @@ export default function SocialLinks() {
                 rel="noopener noreferrer"
                 className="text-xl text-gray-400 hover:text-gray-500"
             >
-                <FaTwitter />
+                <FaTwitter className="w-5 h-8"/>
+            </a>
+            <a
+                href="https://paperblog-jigra.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl text-gray-400 hover:text-gray-500"
+            >
+                <FaBook className="w-5 h-8"/>
             </a>
         </div>
     );
