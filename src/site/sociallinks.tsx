@@ -35,14 +35,14 @@ export default function SocialLinks() {
             >
                 <FaTwitter className="w-5 h-8"/>
             </a>
-            <a
+{/*             <a
                 href="https://paperblog-jigra.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xl text-gray-400 hover:text-gray-500"
             >
                 <FaBook className="w-5 h-8"/>
-            </a>
+            </a> */}
         </div>
     );
 }
