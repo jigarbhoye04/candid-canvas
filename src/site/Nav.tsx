@@ -57,7 +57,9 @@ export default function Nav({
                      ? [
                           <>
                              <div className="font-aspect-range text-center text-3xl font-bold p-8">
-                                JIGRAA
+                                <a href="/" className="text-inherit">
+                                   JIGRAA
+                                </a>
                              </div>
                              <div
                                 key="nav"
