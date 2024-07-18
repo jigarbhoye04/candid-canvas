@@ -1,0 +1,48 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: gray;
+    color: #fff;
+    padding: 2px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scroll-to-top.visible {
+    z-index: 11111;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.1);
+}
+
+.scroll-to-top:hover {
+    transform: scale(1.2);
+    background-color: #444;
+}
+
+/* Responsive styling for tablets */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 60px;
+        right: 18px;
+        padding: 2px;
+        font-size: 24px;
+    }
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 480px) {
+    .scroll-to-top {
+        bottom: 15px;
+        right: 15px;
+        padding: 6px;
+        font-size: 14px;
+    }
+}

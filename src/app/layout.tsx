@@ -17,6 +17,7 @@ import Nav from '@/site/Nav';
 import Footer from '@/site/Footer';
 import CommandK from '@/site/CommandK';
 import SwrConfigClient from '../state/SwrConfigClient';
+import ScrollToTop from '@/components/ScrollToTop';
 
 import '../site/globals.css';
 import '../site/sonner.css';
@@ -92,6 +93,7 @@ export default function RootLayout({
                   {children}
                   <SpeedInsights debug={false}  />
                 </div>
+                <ScrollToTop />
                 <Footer />
               </main>
               <CommandK />
