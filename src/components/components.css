@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: gray;
+    background-color: black;
     color: #fff;
     padding: 2px;
     border-radius: 50%;
@@ -24,25 +24,24 @@
 
 .scroll-to-top:hover {
     transform: scale(1.2);
-    background-color: #444;
 }
 
 /* Responsive styling for tablets */
 @media (max-width: 768px) {
     .scroll-to-top {
-        bottom: 60px;
-        right: 18px;
+        bottom: 20px;
+        right: 47%;
         padding: 2px;
-        font-size: 24px;
+        font-size: 18px;
     }
 }
 
 /* Responsive styling for mobile devices */
 @media (max-width: 480px) {
     .scroll-to-top {
-        bottom: 60px;
-        right: 15px;
+        bottom: 20px;
+        right: 48%;
         padding: 2px;
-        font-size: 20px;
+        font-size: 15px;
     }
 }
