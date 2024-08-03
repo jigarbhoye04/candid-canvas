@@ -17,33 +17,4 @@ Features
 <!-- - Experimental support for AI-generated descriptions -->
 <!-- - Support for Fujifilm simulations -->
 
-
-Installation
--
-### 1. Deploy to Vercel
-
-1. Clone and deploy this repo with vercel.
-2. Add required storage ([Vercel Postgres](https://vercel.com/docs/storage/vercel-postgres/quickstart#create-a-postgres-database) + [Vercel Blob](https://vercel.com/docs/storage/vercel-blob/quickstart#create-a-blob-store)) as part of template installation
-3. Configure environment variables from project settings:
-   - `NEXT_PUBLIC_SITE_TITLE` (e.g., My Photos)
-   - `NEXT_PUBLIC_SITE_DOMAIN` (e.g., photos.domain.com)
-   - `NEXT_PUBLIC_SITE_DESCRIPTION` (optional—mainly used for OG metadata)
-
-### 2. Setup Auth
-
-1. [Generate auth secret](https://generate-secret.vercel.app/32) and add to environment variables:
-   - `AUTH_SECRET`
-2. Add admin user to environment variables:
-   - `ADMIN_EMAIL`
-   - `ADMIN_PASSWORD`
-3. Trigger redeploy
-   - Visit project on Vercel, navigate to "Deployments" tab, click ••• button next to most recent deployment, and select "Redeploy"
-
-
-Develop locally
--
-1. Clone code
-2. Run `pnpm i` to install dependencies
-3. If necessary, install [Vercel CLI](https://vercel.com/docs/cli#installing-vercel-cli) and authenticate by running `vercel login`
-4. Run `vercel link` to connect the CLI to your project
-5. Run `vercel dev` to start dev server with Vercel-managed environment variables
+> Forked From [exif-photo-blog-sambecker](https://github.com/sambecker/exif-photo-blog)
