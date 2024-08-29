@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { clsx } from 'clsx/lite';
@@ -18,6 +19,7 @@ import Footer from '@/site/Footer';
 import CommandK from '@/site/CommandK';
 import SwrConfigClient from '../state/SwrConfigClient';
 import ScrollToTop from '@/components/ScrollToTop';
+import Loading from '@/components/Loading';
 
 import '../site/globals.css';
 import '../site/sonner.css';
@@ -32,7 +34,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
-  ...BASE_URL && { metadataBase: new URL(BASE_URL) },
+  ...(BASE_URL && { metadataBase: new URL(BASE_URL) }),
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
@@ -81,22 +83,31 @@ export default function RootLayout({
         <AppStateProvider>
           <SwrConfigClient>
             <ThemeProvider attribute="class">
-              <main className={clsx(
-                'mx-3 mb-3',
-                'lg:mx-6 lg:mb-6',
+              <div className={clsx(
+                'flex flex-col items-center', // Center the content
+                'w-full min-h-screen', // Ensure it takes full height
+                'px-3 lg:px-6', // Add padding to the sides
               )}>
                 <Nav siteDomainOrTitle={SITE_DOMAIN_OR_TITLE} />
-                <div className={clsx(
-                  'min-h-[16rem] sm:min-h-[30rem]',
-                  'mb-12',
-                )}>
-                  {children}
-                  <SpeedInsights debug={false}  />
-                </div>
-                <ScrollToTop />
-                <Footer />
-              </main>
-              <CommandK />
+                <Suspense fallback={<Loading />}> {/*Added Suspense Fallback*/}
+                  <main className={clsx(
+                    'w-full max-w-7xl', // Restrict the width to a maximum value
+                    'flex flex-col items-center', // Center the content inside main
+                  )}>
+                    <div className={clsx(
+                      'min-h-[16rem] sm:min-h-[30rem]',
+                      'mb-12',
+                      'w-full', // Ensure it takes full width
+                    )}>
+                      {children}
+                      <SpeedInsights debug={false} />
+                    </div>
+                    <ScrollToTop />
+                    <Footer />
+                  </main>
+                </Suspense>
+                <CommandK />
+              </div>
             </ThemeProvider>
           </SwrConfigClient>
           <Analytics debug={false} />

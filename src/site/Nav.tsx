@@ -56,7 +56,7 @@ export default function Nav({
                   showNav
                      ? [
                           <>
-                             <div className="font-aspect-range text-center text-3xl font-bold p-8">
+                             <div className="font-aspect-range text-center text-3xl font-bold py-8 w-full">
                                 <a href="/" className="text-inherit">
                                    JIGRAA
                                 </a>
@@ -64,34 +64,22 @@ export default function Nav({
                              <div
                                 key="nav"
                                 className={clsx(
-                                   // "fixed top-0 left-0 p-5",
-                                   "flex items-center",
-                                   "w-full min-h-[4rem]"
+                                   "flex items-center justify-between w-full px-5",
+                                   "min-h-[4rem] gap-4"
                                 )}
                              >
                                 <ViewSwitcher
                                    currentSelection={switcherSelectionForPath()}
                                    showAdmin={isUserSignedIn}
                                 />
-                                <div
-                                   className={clsx(
-                                      "flex-grow text-right text-ellipsis overflow-hidden",
-                                      "hidden md:block"
-                                   )}
-                                >
+                                <div className="flex-grow text-center hidden md:block">
                                    {renderLink(siteDomainOrTitle, PATH_ROOT)}
                                    {/* Photos By JIGAR */}
                                 </div>
-                                <div
-                                   className={clsx(
-                                      "flex gap-x-3 xs:gap-x-4 flex-grow flex-wrap",
-                                      "justify-end"
-                                   )}
-                                >
+                                <div className="flex gap-3">
                                    <ThemeSwitcher />
                                 </div>
                              </div>
-                             ,
                           </>,
                        ]
                      : []
