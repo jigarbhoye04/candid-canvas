@@ -55,7 +55,7 @@ export default function StaggeredOgPhotos({
   }, [recomputeLoadingState]);
 
   return (
-    <div className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <div className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
       {photos.map((photo, index) =>
         <PhotoOGTile
           key={photo.id}

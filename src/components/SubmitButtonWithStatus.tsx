@@ -3,7 +3,7 @@
 import { ComponentProps, useEffect, useRef } from "react";
 import { useFormStatus } from "react-dom";
 import { clsx } from "clsx/lite";
-import { toastSuccess } from "@/toast";
+import { toastSuccess } from "@/noNeed/toast";
 import LoaderButton from "@/components/primitives/LoaderButton";
 
 export default function SubmitButtonWithStatus({

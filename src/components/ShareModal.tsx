@@ -6,7 +6,7 @@ import { clsx } from "clsx/lite";
 import { BiCopy } from "react-icons/bi";
 import { ReactNode } from "react";
 import { shortenUrl } from "@/utility/url";
-import { toastSuccess } from "@/toast";
+import { toastSuccess } from "@/noNeed/toast";
 import { PiXLogo } from "react-icons/pi";
 import { SHOW_SOCIAL } from "@/site/config";
 import { generateXPostText } from "@/utility/social";

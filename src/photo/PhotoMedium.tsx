@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { Photo, altTextForPhoto, doesPhotoNeedBlurCompatibility } from '.';
-import ImageMedium from '@/components/image/ImageMedium';
-import Link from 'next/link';
-import { clsx } from 'clsx/lite';
-import { pathForPhoto } from '@/site/paths';
-import { Camera } from '@/camera';
-import { FilmSimulation } from '@/simulation';
-import { SHOULD_PREFETCH_ALL_LINKS } from '@/site/config';
-import { useRef } from 'react';
-import useOnVisible from '@/utility/useOnVisible';
+import { Photo, altTextForPhoto, doesPhotoNeedBlurCompatibility } from ".";
+import ImageMedium from "@/components/image/ImageMedium";
+import Link from "next/link";
+import { clsx } from "clsx/lite";
+import { pathForPhoto } from "@/site/paths";
+import { Camera } from "@/camera";
+import { FilmSimulation } from "@/simulation";
+import { SHOULD_PREFETCH_ALL_LINKS } from "@/site/config";
+import { useRef } from "react";
+import useOnVisible from "@/utility/useOnVisible";
 
 export default function PhotoMedium({
   photo,
@@ -23,16 +23,16 @@ export default function PhotoMedium({
   className,
   onVisible,
 }: {
-  photo: Photo
-  tag?: string
-  camera?: Camera
-  simulation?: FilmSimulation
-  focal?: number
-  selected?: boolean
-  priority?: boolean
-  prefetch?: boolean
-  className?: string
-  onVisible?: () => void
+  photo: Photo;
+  tag?: string;
+  camera?: Camera;
+  simulation?: FilmSimulation;
+  focal?: number;
+  selected?: boolean;
+  priority?: boolean;
+  prefetch?: boolean;
+  className?: string;
+  onVisible?: () => void;
 }) {
   const ref = useRef<HTMLAnchorElement>(null);
 
@@ -43,9 +43,9 @@ export default function PhotoMedium({
       ref={ref}
       href={pathForPhoto({ photo, tag, camera, simulation, focal })}
       className={clsx(
-        'active:brightness-75',
-        selected && 'brightness-50',
-        className,
+        "active:brightness-75",
+        selected && "brightness-50",
+        className
       )}
       prefetch={prefetch}
     >
@@ -61,4 +61,4 @@ export default function PhotoMedium({
       />
     </Link>
   );
-};
+}

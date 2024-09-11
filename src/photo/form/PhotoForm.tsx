@@ -16,7 +16,7 @@ import SubmitButtonWithStatus from '@/components/SubmitButtonWithStatus';
 import Link from 'next/link';
 import { clsx } from 'clsx/lite';
 import { PATH_ADMIN_PHOTOS, PATH_ADMIN_UPLOADS } from '@/site/paths';
-import { toastSuccess, toastWarning } from '@/toast';
+import { toastSuccess, toastWarning } from '@/noNeed/toast';
 import { getDimensionsFromSize } from '@/utility/size';
 import ImageWithFallback from '@/components/image/ImageWithFallback';
 import { TagsWithMeta, convertTagsForForm } from '@/tag';

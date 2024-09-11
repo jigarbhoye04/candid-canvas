@@ -7,7 +7,7 @@ import { FiExternalLink } from "react-icons/fi";
 import { BiCog, BiCopy, BiData, BiLockAlt, BiPencil } from "react-icons/bi";
 import Container from "@/components/Container";
 import Checklist from "@/components/Checklist";
-import { toastSuccess } from "@/toast";
+import { toastSuccess } from "@/noNeed/toast";
 import { ConfigChecklistStatus } from "./config";
 import StatusIcon from "@/components/StatusIcon";
 import { labelForStorage } from "@/services/storage";

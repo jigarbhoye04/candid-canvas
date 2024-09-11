@@ -10,7 +10,7 @@ import {
   SITE_TITLE,
 } from '@/site/config';
 import AppStateProvider from '@/state/AppStateProvider';
-import ToasterWithThemes from '@/toast/ToasterWithThemes';
+import ToasterWithThemes from '@/noNeed/toast/ToasterWithThemes';
 import PhotoEscapeHandler from '@/photo/PhotoEscapeHandler';
 import { Metadata } from 'next/types';
 import { ThemeProvider } from 'next-themes';
@@ -113,7 +113,7 @@ export default function RootLayout({
           <Analytics debug={false} />
           {/* <SpeedInsights debug={false}  /> */}
           <PhotoEscapeHandler />
-          <ToasterWithThemes />
+          {/* <ToasterWithThemes /> */}
         </AppStateProvider>
       </body>
     </html>

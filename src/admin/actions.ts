@@ -22,26 +22,26 @@ export const testConnectionsAction = async () =>
     const {
       hasDatabase,
       hasStorageProvider,
-      hasVercelKv,
-      isAiTextGenerationEnabled,
+      // hasVercelKv,
+      // isAiTextGenerationEnabled,
     } = CONFIG_CHECKLIST_STATUS;
 
     const [
       databaseError,
       storageError,
-      kvError,
-      aiError,
+      // kvError,
+      // aiError,
     ] = await Promise.all([
       scanForError(hasDatabase, testDatabaseConnection),
       scanForError(hasStorageProvider, testStorageConnection),
-      scanForError(hasVercelKv, testKvConnection),
-      scanForError(isAiTextGenerationEnabled, testOpenAiConnection),
+      // scanForError(hasVercelKv, testKvConnection),
+      // scanForError(isAiTextGenerationEnabled, testOpenAiConnection),
     ]);
 
     return {
       databaseError,
       storageError,
-      kvError,
-      aiError,
+      // kvError,
+      // aiError,
     };
   });

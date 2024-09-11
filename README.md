@@ -17,7 +17,7 @@ Features
 <!-- - Experimental support for AI-generated descriptions -->
 <!-- - Support for Fujifilm simulations -->
 
-
+<!-- 
 Installation
 -
 ### 1. Deploy to Vercel
@@ -46,4 +46,5 @@ Develop locally
 2. Run `pnpm i` to install dependencies
 3. If necessary, install [Vercel CLI](https://vercel.com/docs/cli#installing-vercel-cli) and authenticate by running `vercel login`
 4. Run `vercel link` to connect the CLI to your project
-5. Run `vercel dev` to start dev server with Vercel-managed environment variables
+5. Run `vercel dev` to start dev server with Vercel-managed environment variables 
+-->
